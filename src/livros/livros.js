@@ -1,31 +1,28 @@
-import meuPrincipal from "../index.js"
+import prompt from "prompt-sync"
+import menuPrincipal from "../index.js"
 
-import Promp from "prompt-sync"
-
-function meuLivros(){
+function menuLivros(){
     const input = prompt()
-    const opcoes = [
+    const livros = [
         "1 - Cadastrar Livro", 
         "2 - Editar Livro", 
         "3 - Excluir Livro", 
         "4 - Listar todos os livros",
         "5 - Buscar livro",
-        "6 - Retornar ao menu principal"
+        "0 - Retornar ao menu principal"
     ]
     
-    const menu = opcoes.join("\n")
+    const menu = livros.join("\n")
     console.log(menu)
     let opcao = input("Digite a opção desejada: ")
     switch(opcao) {
         case "0":
-            meuPrincipal()
-            break
+            menuPrincipal()
+        break
         default:
-            meuLivros()
+            menuLivros()
     }
     
 }
+export default menuLivros
 
-export default meuLivros
-
-// id: 1, titulo: "Avatar", autor:"Aang", editora: "Korra", emprestado: false

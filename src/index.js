@@ -1,9 +1,8 @@
 
-import menulivros from "../src"
+import prompt from "prompt-sync"
+import menuLivros from "./livros/livros.js"
 
-import Promp from "prompt-sync"
-
-function meuPrincipal(){
+function menuPrincipal(){
     const input = prompt()
     const opcoes = [
         "1 - Menu livro", 
@@ -15,16 +14,13 @@ function meuPrincipal(){
     console.log(menu)
     let opcao = input("Digite a opção desejada: ")
     switch(opcao) {
-        case "0":
-            break
-            meuLivros()
-            break
-            default:
+        case "1":
+        menuLivros()
+        break
+        default:
             meuPrincipal()
     }
-   
 }
 
-export default meuPrincipal
-
-meuPrincipal()
+export default menuPrincipal
+menuPrincipal()
