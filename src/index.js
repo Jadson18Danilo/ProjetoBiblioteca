@@ -2,13 +2,13 @@
 import prompt from "prompt-sync"
 import menuLivros from "./livros/livros.js"
 
-function menuPrincipal(){
+function principal(){
     const input = prompt()
     const opcoes = [
-        "1 - Menu livro", 
-        "2 - Menu Usuarios", 
-        "3 - Menu Emprestimo", 
-        "0 - Menu Sair"
+        "1 - livro", 
+        "2 - Usuarios", 
+        "3 - Emprestimo", 
+        "0 - Sair"
     ]
     const menu = opcoes.join("\n")
     console.log(menu)
@@ -17,10 +17,16 @@ function menuPrincipal(){
         case "1":
         menuLivros()
         break
+        case "2":
+        usuarios()
+        break
+        case "3":
+        emprestimo()
+        break
         default:
-            meuPrincipal()
+            console.log("Você saiu do sistema")
     }
 }
 
-export default menuPrincipal
-menuPrincipal()
+export default principal
+principal()
