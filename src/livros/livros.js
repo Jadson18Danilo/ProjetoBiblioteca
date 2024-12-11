@@ -67,7 +67,7 @@ function listarTodosLivros(){
     console.log("+-----------------------+")
     console.log("| Todos os livros       |")
     console.log("+-----------------------+")
-    livros.forEach(livro => console.log(`Id ${livro.id} - Título: ${livro.titulo} `))
+    livros.forEach(livro => console.log(`Id ${livro.id} - Título: ${livro.titulo} - Empréstados: ${livro.emprestado} `))
     console.log("+-----------------------+")
 }
 
@@ -139,5 +139,8 @@ function menulivros(){
     }
     
 }
+
+
+
 export default menulivros
 
