@@ -1,8 +1,8 @@
 // Importações necessárias
 import PromptSync from "prompt-sync";
-import utils from "../utils/format-util.js";
+import utils from "../utils/format-utils.js";
 import menuPrincipal from "./main-view.js";
-import usuarioController from "../controllers/usuario-controller.js";
+import usuarioController from "../controllers/usuario-controllers.js";
 
 // Inicializando o prompt
 const prompt = PromptSync();

@@ -1,11 +1,32 @@
 // Importações necessárias
 import PromptSync from "prompt-sync";
-import utils from "../utils/format-util.js";
+import utils from "../utils/format-utils.js";
 import menuPrincipal from "./main-view.js";
 
 // Inicializando o prompt
 const prompt = PromptSync();
 const width = 80;
+
+/**
+ * Cadastra um novo livro no sistema.
+ * Solicita os dados do livro (ID, titulo, autor, editora e emprestado) e os envia para o controlador.
+ */
+const cadastrarLivro = () => {
+    console.clear();
+    console.log(utils.createBase(width));
+    console.log(utils.formatMessage("Cadastrar livro", width));
+    console.log(utils.createBase(width));
+    const id = prompt("| * ID: ");
+    const titulo = prompt("| * titulo: ");
+    const autor = prompt("| * autor: ");
+    const editora = prompt("| * Editora: ");
+    usuarioController.save({ id, titulo, autor, editora });
+    console.log(utils.createBase(width));
+    console.log(utils.formatMessage("livro cadastrado com sucesso!", width));
+    console.log(utils.createBase(width));
+    prompt("Pressione Enter para continuar...");
+    usuarioView();
+};
 
 const livroView = () => {
     console.clear();
@@ -25,7 +46,7 @@ const livroView = () => {
             menuPrincipal();
             break
         case "1":
-            // cadastrarlivro();
+            cadastrarLivro();
             break;
         case "2":
             // editarlivro();
