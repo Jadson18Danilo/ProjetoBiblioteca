@@ -41,4 +41,4 @@ const usuarioRepository = {
     }
 }
 
-export default usuarioController;
+export default usuarioRepository
