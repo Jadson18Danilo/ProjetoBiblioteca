@@ -1,5 +1,5 @@
 
-import prompt from "prompt-sync";
+/*import prompt from "prompt-sync";
 
 import menuUsuarios from "./usuario/usuario.js"
 import menuLivros from "./livros/livros.js"
@@ -41,4 +41,4 @@ function menuPrincipal() {
 export default menuPrincipal;
 
 console.clear();
-menuPrincipal();
+menuPrincipal();*/

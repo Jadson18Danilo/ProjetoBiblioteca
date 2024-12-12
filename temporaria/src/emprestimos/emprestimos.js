@@ -1,4 +1,4 @@
-import prompt from "prompt-sync";
+/*import prompt from "prompt-sync";
 
 import menuPrincipal from "../index.js";
 import { dados as emprestimos } from "../../data/emprestimos.js";
@@ -132,4 +132,4 @@ function menuEmprestimos() {
     }
 }
 
-export default menuEmprestimos;
+export default menuEmprestimos;*/

@@ -1,5 +1,5 @@
 
-export const dados = [
+/*export const dados = [
     {
         cpf: "12345678901",
         nome: "Francisco de Assis",
@@ -18,4 +18,4 @@ export const dados = [
         telefone: "123123123",
         email: "joao@email.com"
     },
-]
+]*/

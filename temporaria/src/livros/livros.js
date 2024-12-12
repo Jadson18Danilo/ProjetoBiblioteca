@@ -1,4 +1,4 @@
-import prompt from "prompt-sync";
+/*import prompt from "prompt-sync";
 import menuPrincipal from "../index.js";
 import { dados } from "../../data/livros.js";
 
@@ -135,4 +135,4 @@ function menuLivros() {
     }
 }
 
-export default menuLivros;
+export default menuLivros;*/
