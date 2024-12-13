@@ -2,6 +2,7 @@
 import PromptSync from "prompt-sync";
 import utils from "../utils/format-utils.js";
 import menuPrincipal from "./main-view.js";
+import livroController from "../controllers/livro-controle.js";
 
 // Inicializando o prompt
 const prompt = PromptSync();
@@ -16,16 +17,17 @@ const cadastrarLivro = () => {
     console.log(utils.createBase(width));
     console.log(utils.formatMessage("Cadastrar livro", width));
     console.log(utils.createBase(width));
-    const id = prompt("| * ID: ");
+    const id = Math.floor(Math.random() * 1000000).toString();
     const titulo = prompt("| * titulo: ");
     const autor = prompt("| * autor: ");
     const editora = prompt("| * Editora: ");
-    usuarioController.save({ id, titulo, autor, editora });
+    const emprestado = false;
+    livroController.save({ id, titulo, autor, editora, emprestado });
     console.log(utils.createBase(width));
     console.log(utils.formatMessage("livro cadastrado com sucesso!", width));
     console.log(utils.createBase(width));
     prompt("Pressione Enter para continuar...");
-    usuarioView();
+    livroView();
 };
 
 const livroView = () => {

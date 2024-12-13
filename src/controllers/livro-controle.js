@@ -1,4 +1,4 @@
-import usuarioRepository from "../repositories/usuario-repository.js";
+import livroRepository from "../repositories/livro-repository.js";
 
 /**
  * Controlador de Usuários.
